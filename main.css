@@ -205,11 +205,8 @@ a {
 .links {
 	list-style: none;
 	padding: 0;
-	position: absolute;
-	top: 93%;
-	left: 0;
-	right: 0;
-	margin-top: 10px;
+	position: relative;
+	margin-top: 20px;
 }
 
 .links li {
