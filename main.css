@@ -181,7 +181,6 @@ a {
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	-webkit-animation: pulse 2.2s infinite ease-in-out;
 	opacity: 0.9;
 }
 
