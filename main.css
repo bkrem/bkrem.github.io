@@ -252,11 +252,12 @@ a {
 	-webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
 }
 
-.bio {
+.bio,
+.experience {
 	margin: 0 20% 0 20%;
 	font-size: 18px;
 	text-align: justify;
-	margin-bottom: 7%;
+	margin-bottom: 3%;
 }
 
 @media (max-width: 767px) {
