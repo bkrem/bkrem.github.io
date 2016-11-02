@@ -86,10 +86,10 @@ html {
 body {
 	background: none;
 	color: #fff;
-	font-family: Lato, 'Helvetica Neue';
+	font-family: 'Helvetica Neue', Helvetica;
 	-webkit-font-smoothing: antialiased;
 	-webkit-backface-visibility: hidden;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 /* override bootstrap defaults */
@@ -250,6 +250,13 @@ a {
 	display: block;
 	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
 	-webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.bio {
+	margin: 0 20% 0 20%;
+	font-size: 18px;
+	text-align: justify;
+	margin-bottom: 7%;
 }
 
 @media (max-width: 767px) {
