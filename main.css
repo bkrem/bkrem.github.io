@@ -216,6 +216,14 @@ a {
 	color: #fff;
 }
 
+.location span {
+	font-size: 18px;
+}
+
+.location i {
+	margin: 0 10px 0 10px;
+}
+
 .more {
 	position: absolute;
 	top: 120%;
