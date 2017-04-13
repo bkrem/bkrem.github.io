@@ -1,0 +1,61 @@
+==================================================================
+https://keybase.io/bkrem
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://bkrem.github.io
+  * I am bkrem (https://keybase.io/bkrem) on keybase.
+  * I have a public key ASDtqoEwVxX8MaRdOoQTQZKdit_1DaQHwEsj8ifTFRESvgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120edaa81305715fc31a45d3a841341929d8adff50da407c04b23f227d3151112be0a",
+            "host": "keybase.io",
+            "kid": "0120edaa81305715fc31a45d3a841341929d8adff50da407c04b23f227d3151112be0a",
+            "uid": "0b93a8c6e6c7328cdf045c2c54d0f919",
+            "username": "bkrem"
+        
+        },
+        "service": {
+            "hostname": "bkrem.github.io",
+            "protocol": "https:"
+        
+        },
+        "type": "web_service_binding",
+        "version": 1
+    
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    
+    },
+    "ctime": 1492125250,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1492125239,
+        "hash": "b6e5a1689676536e744f8ebfd32d66ee32f51a4d4a12b78007242d8df85bdff3abec592049fc491d4882258eed6665561985536145cd30ca066b117215b6adc4",
+        "seqno": 1018029
+    
+    },
+    "prev": "0404729935a0f6282cf8a608db78df316fa537c1b589f55a97819eebce1b45f3",
+    "seqno": 14,
+    "tag": "signature"
+
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7aqBMFcV/DGkXTqEE0GSnYrf9Q2kB8BLI/In0xUREr4Kp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZWRhYTgxMzA1NzE1ZmMzMWE0NWQzYTg0MTM0MTkyOWQ4YWRmZjUwZGE0MDdjMDRiMjNmMjI3ZDMxNTExMTJiZTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZWRhYTgxMzA1NzE1ZmMzMWE0NWQzYTg0MTM0MTkyOWQ4YWRmZjUwZGE0MDdjMDRiMjNmMjI3ZDMxNTExMTJiZTBhIiwidWlkIjoiMGI5M2E4YzZlNmM3MzI4Y2RmMDQ1YzJjNTRkMGY5MTkiLCJ1c2VybmFtZSI6ImJrcmVtIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJia3JlbS5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ5MjEyNTI1MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkyMTI1MjM5LCJoYXNoIjoiYjZlNWExNjg5Njc2NTM2ZTc0NGY4ZWJmZDMyZDY2ZWUzMmY1MWE0ZDRhMTJiNzgwMDcyNDJkOGRmODViZGZmM2FiZWM1OTIwNDlmYzQ5MWQ0ODgyMjU4ZWVkNjY2NTU2MTk4NTUzNjE0NWNkMzBjYTA2NmIxMTcyMTViNmFkYzQiLCJzZXFubyI6MTAxODAyOX0sInByZXYiOiIwNDA0NzI5OTM1YTBmNjI4MmNmOGE2MDhkYjc4ZGYzMTZmYTUzN2MxYjU4OWY1NWE5NzgxOWVlYmNlMWI0NWYzIiwic2Vxbm8iOjE0LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQAo3NQOP9cRr21uzclP1fGhLTf5CSgRucpmRQJu5xEjV2llAh16iUkNDNr2MUopyDCzXuVpUHJeeYN661LBoYA2oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDYH8zHcQPReRXYhCriEeD1EmzO9kGhb7/IpwBgsO9CBKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bkrem
+
+==================================================================
+
