@@ -22,9 +22,9 @@
 
 	$('.email').attr('href', 'mailto:' + 'ben' + '.' + 'kremer' + '@' + 'protonmail' + '.' + 'com');
 
-	$('.profile a').on('mouseover mouseout', function (e) {
-		$(this).toggleClass('animated tada', e.type === 'mouseover');
-	});
+	// $('.profile a').on('mouseover mouseout', function (e) {
+	// 	$(this).toggleClass('animated tada', e.type === 'mouseover');
+	// });
 
 	setTimeout(function () {
 		$('.credit').addClass('activate');
