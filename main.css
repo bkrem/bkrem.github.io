@@ -219,6 +219,9 @@ a:focus {
 .links a {
 	font-size: 20px;
 	color: #fff;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .links a:hover {
@@ -235,6 +238,9 @@ a:focus {
 
 .content {
   margin: 40px 0;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .content:hover {
