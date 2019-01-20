@@ -39,11 +39,11 @@
 
   $('.email').attr('href', generateMailTo());
 
-  // $('.profile a').on('mouseover mouseout', function (e) {
+  // $('.links li').on('mouseover mouseout', function (e) {
   // 	$(this).toggleClass('animated tada', e.type === 'mouseover');
   // });
 
   setTimeout(function() {
     $('.credit').addClass('activate');
-  }, 1000);
+  }, 500);
 })();
