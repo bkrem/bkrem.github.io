@@ -130,6 +130,7 @@ a:focus {
 .container {
 	text-align: center;
 	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 .about {
@@ -193,10 +194,6 @@ a:focus {
 
 .credit.activate .name span:first-child {
 	padding-left: 10px;
-}
-
-.credit.activate .name span:last-child {
-
 }
 
 .message {
