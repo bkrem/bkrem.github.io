@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nit privacy policy</title>
+<link rel="stylesheet" href="../_style.css">
+</head>
+<body>
+<main>
+<h1>Nit privacy policy</h1>
+<p class="muted">Last updated: August 25, 2026</p>
+
+<p>Nit is an iOS app for reviewing GitHub pull requests. It is built and published by Ben Kremer. This policy describes what data Nit handles and where that data goes.</p>
+
+<h2>Summary</h2>
+<ul>
+<li>Nit has no backend server. The developer never receives your data.</li>
+<li>Nit contains no analytics, advertising, or crash-reporting SDKs.</li>
+<li>Your phone talks directly to GitHub and to the AI provider you configure, over TLS.</li>
+<li>Tokens and API keys are stored in the iOS Keychain and never leave your device except in requests to the service they belong to.</li>
+<li>Notifications are created on your device. Nit has no push server.</li>
+</ul>
+
+<h2>Data stored on your device</h2>
+<ul>
+<li><strong>GitHub personal access tokens</strong> and <strong>AI provider API keys</strong> that you enter, and the sign-in credential from an optional ChatGPT subscription login. These live only in the iOS Keychain.</li>
+<li><strong>Pull request content</strong> you open: metadata, diffs, comments, and CI status, cached so PRs still open offline.</li>
+<li><strong>AI conversation threads</strong> and <strong>pending review drafts</strong>, saved per pull request.</li>
+<li><strong>Queued batch walkthroughs</strong>: when a walkthrough runs through a provider's batch API, Nit keeps the diff it sent and the provider's job ID until the result arrives.</li>
+</ul>
+<p><strong>Settings → Delete all data</strong> removes every cached PR, thread, draft, token, and key from the device and cancels any queued walkthrough job. Deleting the app removes the cache and the Keychain entries as well.</p>
+
+<h2>Data sent to third parties</h2>
+<p>Nit sends data only to services you choose to use, and only when you use them.</p>
+<ul>
+<li><strong>GitHub.</strong> Nit calls the GitHub API to load pull requests and, when you ask it to, to post comments, submit reviews, and merge. Requests carry the token you configured. GitHub's handling of that data is governed by the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</li>
+<li><strong>Your AI provider.</strong> When you ask a question about a diff or request a PR summary, Nit sends the selected lines, surrounding file context, your question, and the thread history to the provider you configured (Anthropic, OpenAI, OpenRouter, or a ChatGPT subscription). That content, including source code from the pull request, is handled under that provider's terms and privacy policy. A batch walkthrough sends the same content to the provider's batch API, where requests are retained for about 30 days rather than processed transiently. Nit never sends anything to an AI provider without an explicit action from you.</li>
+</ul>
+<p>Nit sends data to no other party.</p>
+
+<h2>Data the developer collects</h2>
+<p>None. Nit has no telemetry, no accounts, and no server operated by the developer. If you email support, that email is the only information the developer holds about you, and it is used only to reply.</p>
+
+<h2>Permissions</h2>
+<p>Nit uses the network to reach GitHub and your AI provider, and registers a share extension so you can send PR links to it from other apps. It requests no access to contacts, location, photos, camera, or microphone.</p>
+<p><strong>Notifications.</strong> If you allow them, sharing a pull request to Nit posts a notification you tap to open that PR — iOS gives a share extension no other way to reach the app. The notification is created on your device and sent nowhere: Nit has no push server and receives no remote notifications. It names the repository and pull request number, so that text can appear on your lock screen; turn off <strong>Show Previews</strong> for Nit in iOS Settings to hide it. Decline the permission and a shared PR waits for you the next time you open Nit instead.</p>
+
+<h2>Children</h2>
+<p>Nit is a developer tool and is not directed at children under 13.</p>
+
+<h2>Changes</h2>
+<p>Changes to this policy appear on this page with an updated date at the top.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:contact@bkrem.dev">contact@bkrem.dev</a></p>
+
+<hr>
+<footer>© 2026 Ben Kremer</footer>
+</main>
+</body>
+</html>

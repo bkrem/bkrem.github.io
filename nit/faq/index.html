@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nit — FAQ</title>
+<meta name="description" content="Answers to common questions about Nit, the iOS app for reviewing GitHub pull requests with your own AI.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../_style.css">
+</head>
+<body>
+<main>
+<h1>FAQ</h1>
+<p class="muted">Common questions about Nit for iOS.</p>
+
+<h2>Getting started</h2>
+
+<h3>What is Nit?</h3>
+<p>A native iOS app for reviewing GitHub pull requests on your phone with your own AI. Open a PR, read a proper diff, ask your model about any hunk, then comment, approve, and merge.</p>
+
+<h3>How do I install it?</h3>
+<p>Nit is in beta on TestFlight. Install the TestFlight app, then open the <a href="https://testflight.apple.com/join/sMADfKGQ">public beta link</a>. It requires iOS 26.</p>
+
+<h3>What does it cost?</h3>
+<p>Nit is free while it's in beta. AI answers come from your own provider account, so any usage there is billed by that provider.</p>
+
+<h3>Do I need a GitHub token?</h3>
+<p>Not for public pull requests. Add a fine-grained personal access token under Settings to open private repositories and to comment, review, and merge.</p>
+
+<h3>What permissions does the token need?</h3>
+<p><em>Contents</em> and <em>Pull requests</em> read access to view a repository's PRs, and write access on both to review and merge. You can add several tokens; Nit picks the one that can see each repository.</p>
+
+<h3>How do I open a pull request?</h3>
+<p>Three ways: paste a GitHub URL on the home screen, share a link to Nit from Safari or any other app through the iOS share sheet, or pick one from your inbox. The inbox lists PRs waiting on your review, PRs you opened recently, and PRs you're involved in.</p>
+
+<h2>Compatibility</h2>
+
+<h3>Does Nit work with GitHub Enterprise?</h3>
+<p>GitHub Enterprise Cloud works, since those organizations live on github.com. Support for self-hosted GitHub Enterprise Server is coming soon.</p>
+
+<h3>Is there an iPad, Mac, or Android version?</h3>
+<p>Nit is currently iPhone only.</p>
+
+<h3>Does it work offline?</h3>
+<p>Pull requests you've opened are cached on the device, so they still open without a connection. Loading new PRs, Ask AI, and posting comments or reviews need the network.</p>
+
+<h3>Can I see a side-by-side diff?</h3>
+<p>Rotate to landscape for a read-only side-by-side view. Selecting lines and commenting happen in the portrait view.</p>
+
+<h2 id="ai">AI</h2>
+
+<h3>Which AI providers work?</h3>
+<p>Anthropic, OpenAI, and OpenRouter API keys, or sign in with your ChatGPT subscription without an API key. You pick the model.</p>
+
+<h3>What does Nit send to the AI provider?</h3>
+<p>Nothing until you ask. For Ask AI, Nit sends the lines you selected, surrounding file context fitted to a token cap, your question, and the thread's earlier messages. A walkthrough sends the PR's diff. Every answer shows how many tokens went in and out, and Nit tells you when it had to truncate context.</p>
+
+<h3>What's the difference between Walkthrough and Ask AI?</h3>
+<p>Walkthrough generates a narrated tour of the whole PR, stop by stop, before you start reading. Ask AI answers a question about the lines or hunk you selected, with presets such as <strong>Explain</strong>, <strong>What could break?</strong>, and <strong>Security review</strong>, and follow-up questions keep the thread.</p>
+
+<h3>What are batch walkthroughs?</h3>
+<p>With Anthropic or OpenRouter you can turn on <strong>Batch walkthroughs</strong> in Settings. Walkthroughs then go through the provider's batch API at about half the price. The job is queued rather than streamed, usually taking 10 minutes to an hour, and Nit notifies you when it's ready. Ask AI always streams.</p>
+
+<h3>What is the Effort setting?</h3>
+<p>Each provider has a reasoning effort under Settings → AI provider → <strong>Effort</strong>. Nit defaults to low for speed and cost; raise it for deeper walkthroughs and answers.</p>
+
+<h3>Can an AI answer become a review comment?</h3>
+<p>Yes. One tap turns any answer into a line comment in your pending review.</p>
+
+<h2>Reviewing and merging</h2>
+
+<h3>Can I approve and merge from my phone?</h3>
+<p>Yes. Line comments you draft while reading batch into one pending review. Submit it with a verdict of Comment, Approve, or Request changes, then merge with a merge commit, squash, or rebase.</p>
+
+<h3>Why don't I see a Comment or Merge button?</h3>
+<p>Nit shows write actions only after it confirms your token has write access to that repository, so a read-only token stays read-only.</p>
+
+<h2>Privacy and data</h2>
+
+<h3>Does Nit track me?</h3>
+<p>No. There is no analytics, crash reporting, or third-party SDK, and no Nit server or account. Your phone talks directly to GitHub and to the AI provider you configured, over TLS.</p>
+
+<h3>Where are my keys stored?</h3>
+<p>Tokens and API keys go into the iOS Keychain the moment you enter them, are never logged, and leave the device only in requests to the service they belong to.</p>
+
+<h3>How do I delete my data?</h3>
+<p>Settings → <strong>Delete all data</strong> removes every cached PR, thread, draft, token, and key. Deleting the app removes them too.</p>
+
+<h3>Where is the full privacy policy?</h3>
+<p>See the <a href="../privacy/">privacy policy</a>.</p>
+
+<h2>Support</h2>
+
+<h3>Something's broken. How do I report it?</h3>
+<p>Two ways. In the TestFlight app, open Nit and tap <strong>Send Beta Feedback</strong>; or take a screenshot inside Nit and choose <strong>Share Beta Feedback</strong> from the screenshot's share options, which attaches the image and device details. You can also email <a href="mailto:contact@bkrem.dev">contact@bkrem.dev</a> with your iOS version and what you were doing. See the <a href="../support/">support page</a> for more.</p>
+
+<hr>
+<footer>© 2026 Ben Kremer · <a href="../">nit</a></footer>
+</main>
+</body>
+</html>
