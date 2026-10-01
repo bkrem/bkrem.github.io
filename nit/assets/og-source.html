@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Nit social card source</title>
+<!-- Source for og.png. Render at 1200×630 from the repo root:
+     python3 -m http.server 8080
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --window-size=1200,630 --screenshot=assets/og.png http://localhost:8080/assets/og-source.html -->
+<style>
+@font-face{font-family:"JetBrains Mono";font-weight:400;src:url(fonts/JetBrainsMono-Regular.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:700;src:url(fonts/JetBrainsMono-Bold.woff2) format("woff2")}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body{background:linear-gradient(180deg,#151A1D 0%,#08090A 85%);color:#EDEFF1;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.card{position:absolute;inset:0;padding:78px 80px;box-sizing:border-box}
+.lockup{display:flex;align-items:center;gap:14px;margin-bottom:44px}
+.lockup svg{width:52px;height:52px}
+.wordmark{font:700 52px/1 "JetBrains Mono",monospace;letter-spacing:-2px;display:inline-flex;align-items:center;gap:8px}
+.wordmark::after{content:"";display:inline-block;width:18px;height:36px;background:#EDEFF1}
+h1{margin:0 0 28px;font-size:72px;line-height:1.02;font-weight:700;letter-spacing:-.025em;max-width:1040px}
+p{margin:0 0 30px;font-size:29px;line-height:1.3;color:#99A1A9;max-width:960px}
+.chips{display:flex;gap:16px}
+.chips span{font:400 21px/1 "JetBrains Mono",monospace;color:#99A1A9;border:1.5px solid #2C333A;border-radius:999px;padding:14px 22px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="lockup">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="#EDEFF1"><rect x="0" y="0" width="6" height="44" rx="3"/><rect x="0" y="0" width="17" height="6" rx="3"/><rect x="0" y="38" width="17" height="6" rx="3"/><rect x="38" y="0" width="6" height="44" rx="3"/><rect x="27" y="0" width="17" height="6" rx="3"/><rect x="27" y="38" width="17" height="6" rx="3"/></g><rect x="19" y="11" width="6" height="6" rx="1.5" fill="#5DA37D"/><rect x="19" y="27" width="6" height="6" rx="1.5" fill="#C0655A"/></svg>
+    <span class="wordmark">nit</span>
+  </div>
+  <h1>You run your agents from your phone. Review the last mile there too.</h1>
+  <p>A proper diff, an AI walkthrough, and Ask AI on any hunk. Comment, approve, merge. No laptop.</p>
+  <div class="chips"><span>bring your own key</span><span>no telemetry</span><span>iPhone only</span></div>
+</div>
+</body>
+</html>

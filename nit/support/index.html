@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nit — support</title>
+<link rel="stylesheet" href="../_style.css">
+</head>
+<body>
+<main>
+<h1>Support</h1>
+<p class="muted">Help with Nit for iOS. For common questions, see the <a href="../faq/">FAQ</a>.</p>
+<p>Email <a href="mailto:contact@bkrem.dev">contact@bkrem.dev</a> and include your iOS version and what you were doing when the problem happened. You'll normally hear back within a few days.</p>
+<h2>Common questions</h2>
+<h3>Nit can't see my repository</h3>
+<p>Nit uses the GitHub tokens you add under Settings. A fine-grained token needs <em>Contents</em> and <em>Pull requests</em> read access to view a repository's PRs, and write access on both to review and merge. You can add several tokens; Nit picks the one that can see each repository.</p>
+<h3>Ask AI returns an error</h3>
+<p>Answers come from your own provider account — an Anthropic, OpenAI, or OpenRouter API key, or a ChatGPT sign-in. Check that the key is valid and has credit; Nit adds nothing on top of the provider's own limits.</p>
+<h3>Where is my data?</h3>
+<p>There is no Nit server and no account. Tokens and keys stay in the iOS Keychain on your device; opened pull requests are cached on device only. See the <a href="../privacy/">privacy policy</a>.</p>
+<h3>Deleting your data</h3>
+<p>Delete the app. Everything Nit stores — tokens, keys, cached pull requests — lives on the device and is removed with it.</p>
+<hr>
+<footer>© 2026 Ben Kremer · <a href="../">nit</a></footer>
+</main>
+</body>
+</html>

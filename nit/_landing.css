@@ -1,0 +1,119 @@
+/* Landing page only. Tokens follow STYLEGUIDE.md in bkrem/nit (web values). */
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/JetBrainsMono-Regular.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/JetBrainsMono-Bold.woff2) format("woff2")}
+
+/* Every colour is a light/dark pair; color-scheme picks the side. */
+:root{
+  color-scheme:dark light;
+  --canvas:light-dark(#F6F7F8,#08090A);
+  --surface:light-dark(#FFFFFF,#111417);
+  --well:light-dark(#E6E9EB,#181C20);
+  --hairline:light-dark(#D9DDE0,#22282D);
+  --ink:light-dark(#0E1114,#EDEFF1);
+  --on-ink:light-dark(#FFFFFF,#08090A);
+  --label:light-dark(#4A535B,#99A1A9);
+  --link:light-dark(#0066CC,#409CFF);
+  --addition:light-dark(#2F7D53,#5DA37D);
+  --deletion:light-dark(#A8402F,#C0655A);
+  --merge:light-dark(#6A4B94,#9D82C7);
+  --sans:"Helvetica Neue",Helvetica,Inter,-apple-system,BlinkMacSystemFont,Arial,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--canvas);color:var(--ink);font:17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{margin:0;letter-spacing:-.02em;line-height:1.1}
+p{margin:0 0 1rem}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+.mono{font-family:var(--mono)}
+.muted{color:var(--label)}
+
+/* Header */
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding:1.5rem 0}
+.lockup{display:inline-flex;align-items:center;gap:.6rem;color:var(--ink)}
+.lockup:hover{text-decoration:none}
+.lockup svg{width:26px;height:26px;flex:none}
+.wordmark{font:700 26px/1 var(--mono);letter-spacing:-1px;display:inline-flex;align-items:center;gap:4px}
+.wordmark::after{content:"";display:inline-block;width:9px;height:18px;background:var(--ink);animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.wordmark::after{animation:none}}
+nav{display:flex;align-items:center;gap:1.25rem;font-size:.95rem}
+nav a{color:var(--label)}
+nav a:hover{color:var(--ink);text-decoration:none}
+.theme{appearance:none;background:none;border:1px solid var(--hairline);border-radius:999px;width:36px;height:36px;padding:0;display:inline-grid;place-items:center;color:var(--label);cursor:pointer}
+.theme:hover{color:var(--ink);border-color:var(--label)}
+.theme svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme .moon{display:none}
+:root[data-theme=dark] .theme .sun{display:none}
+:root[data-theme=dark] .theme .moon{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme=light]) .theme .sun{display:none}
+  :root:not([data-theme=light]) .theme .moon{display:block}
+}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:3rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.25rem,5.5vw,3.75rem);font-weight:700}
+.hero .lede{font-size:1.2rem;color:var(--label);margin:1.25rem 0 1.5rem;max-width:34rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.75rem;padding:0;list-style:none}
+.chips li{font:400 13px/1 var(--mono);color:var(--label);border:1px solid var(--hairline);border-radius:999px;padding:.5rem .8rem}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+.button{display:inline-block;background:var(--ink);color:var(--on-ink);font-weight:600;font-size:1rem;line-height:1;padding:.95rem 1.4rem;border-radius:999px;white-space:nowrap}
+.button:hover{text-decoration:none;opacity:.85}
+.cta .muted{font-size:.9rem}
+
+/* Phone frame */
+.phone{width:min(100%,320px);margin:0 auto;border-radius:2.4rem;overflow:hidden;background:#000;border:1px solid var(--hairline);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.phone img{width:100%}
+.hero .phone{width:min(100%,300px)}
+
+/* Sections */
+section{padding:3.5rem 0;border-top:1px solid var(--hairline)}
+section h2{font-size:clamp(1.6rem,3vw,2.25rem);margin-bottom:1rem}
+section .label{font:500 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--label);margin:0 0 1rem}
+.prose{max-width:40rem}
+.prose p{color:var(--label);font-size:1.1rem}
+.prose strong{color:var(--ink);font-weight:600}
+
+/* Feature rows */
+.features{display:grid;gap:4rem}
+.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center}
+.feature.reverse .phone,.feature.reverse .pair{order:-1}
+.feature h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:.75rem}
+.feature p{color:var(--label);font-size:1.1rem;max-width:30rem}
+.feature .phone{width:min(100%,300px)}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;max-width:26rem;margin:0 auto}
+.pair .phone{width:100%}
+
+/* Fact list */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem;margin:0;padding:0;list-style:none}
+.facts li{background:var(--surface);border:1px solid var(--hairline);border-radius:14px;padding:1.25rem}
+.facts h3{font-size:1.05rem;margin-bottom:.4rem}
+.facts p{color:var(--label);margin:0;font-size:1rem}
+.note{margin:1.25rem 0 0;font-size:.95rem;color:var(--label)}
+.emoji{margin-right:.45em}
+
+/* Closing */
+.close{text-align:center}
+.close h2{margin-bottom:.5rem}
+.close p{color:var(--label);margin-bottom:1.5rem}
+.close .cta{justify-content:center}
+footer{border-top:1px solid var(--hairline);padding:2rem 0;font-size:.9rem;color:var(--label);display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+footer a{color:var(--label)}
+
+@media (max-width:720px){
+  .top{padding:1.25rem 0}
+  nav{gap:.85rem;font-size:.9rem}
+  .theme{width:32px;height:32px}
+  .hero{grid-template-columns:1fr;gap:2.5rem;padding:2rem 0 3rem}
+  .feature{grid-template-columns:1fr;gap:1.75rem}
+  .feature.reverse .phone,.feature.reverse .pair{order:0}
+  .feature .phone,.hero .phone{width:min(100%,260px)}
+  section{padding:2.75rem 0}
+}
